@@ -7,6 +7,9 @@ function Nav() {
     <nav>
       <h1>Logo</h1>
       <ul className="nav-links">
+        <Link to="/">
+          <li>Home</li>
+        </Link>
         <Link to="/shop">
           <li>Shop</li>
         </Link>
