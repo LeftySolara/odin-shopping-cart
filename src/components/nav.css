@@ -1,0 +1,24 @@
+nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #a8d0e6;
+  color: #fefefe;
+  width: 100%;
+}
+
+nav h1 {
+  margin-left: 40px;
+}
+
+.nav-links {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  font-size: 18px;
+  font-weight: bold;
+}
