@@ -1,14 +1,21 @@
 import React from 'react';
 import ProductCard from './productCard';
+import products from '../products';
 import './shop.css';
 
 function Shop() {
-  const products = [];
-  for (let i = 0; i < 20; ++i) {
-    products.push(<ProductCard />);
-  }
-
-  return <div id="shop">{products}</div>;
+  const productCards = [];
+  products.forEach((product) => {
+    productCards.push(
+      <ProductCard
+        id={product.id}
+        name={product.name}
+        price={product.price}
+        image={product.image}
+      />,
+    );
+  });
+  return <div id="shop">{productCards}</div>;
 }
 
 export default Shop;

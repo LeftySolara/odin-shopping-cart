@@ -1,25 +1,31 @@
 .product-card {
-  margin-top: 15px;
-  border: 1px solid black;
-  color: #f76c6c;
-}
-
-.product-card img {
-  height: 218px;
+  width: 20%;
+  margin: 30px 0px 0px 15px;
 }
 
 .product-name {
+  font-size: 18px;
   font-weight: bold;
+}
+
+.image-container {
+  width: 100%;
+}
+
+.image-container img {
+  height: 100%;
+  width: 100%;
 }
 
 .price-and-quantity-container {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .price-and-quantity-container input {
   width: 15%;
+  margin-left: 20px;
 }
 
 .price {

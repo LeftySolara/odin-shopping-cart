@@ -1,14 +1,17 @@
 import React from 'react';
 import './productCard.css';
-import roses from '../images/pink-roses.jpg';
 
-function ProductCard() {
+function ProductCard(props) {
+  const { id, name, price, image } = props;
+
   return (
-    <div className="product-card">
-      <img src={roses} alt="pink roses" />
-      <p className="product-name">Product Name</p>
+    <div id={id} className="product-card">
+      <div className="image-container">
+        <img src={image} alt={name} />
+      </div>
+      <p className="product-name">{name}</p>
       <div className="price-and-quantity-container">
-        <p className="price">$9.99</p>
+        <p className="price">${price}</p>
         <input type="number" min="0" placeholder="0" />
       </div>
       <button type="button">Add to Cart</button>
