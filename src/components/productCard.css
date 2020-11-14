@@ -1,0 +1,27 @@
+.product-card {
+  margin-top: 15px;
+  border: 1px solid black;
+  color: #f76c6c;
+}
+
+.product-card img {
+  height: 218px;
+}
+
+.product-name {
+  font-weight: bold;
+}
+
+.price-and-quantity-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.price-and-quantity-container input {
+  width: 15%;
+}
+
+.price {
+  font-weight: bold;
+}
