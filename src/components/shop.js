@@ -3,7 +3,8 @@ import ProductCard from './productCard';
 import products from '../products';
 import './shop.css';
 
-function Shop() {
+function Shop(props) {
+  const { handleButtonClick } = props;
   const productCards = [];
   products.forEach((product) => {
     productCards.push(
@@ -12,6 +13,7 @@ function Shop() {
         name={product.name}
         price={product.price}
         image={product.image}
+        handleButtonClick={handleButtonClick}
       />,
     );
   });

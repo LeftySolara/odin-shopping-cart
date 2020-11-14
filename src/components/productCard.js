@@ -2,7 +2,7 @@ import React from 'react';
 import './productCard.css';
 
 function ProductCard(props) {
-  const { id, name, price, image } = props;
+  const { id, name, price, image, handleButtonClick } = props;
 
   return (
     <div id={id} className="product-card">
@@ -12,9 +12,17 @@ function ProductCard(props) {
       <p className="product-name">{name}</p>
       <div className="price-and-quantity-container">
         <p className="price">${price}</p>
-        <input type="number" min="0" placeholder="0" />
+        <input id={`input-${id}`} type="number" min="0" placeholder="0" />
       </div>
-      <button type="button">Add to Cart</button>
+      <button
+        type="button"
+        onClick={() => {
+          const quantity = document.getElementById(`input-${id}`).value;
+          handleButtonClick(id, quantity);
+        }}
+      >
+        Add to Cart
+      </button>
     </div>
   );
 }
