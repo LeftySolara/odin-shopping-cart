@@ -1,3 +1,7 @@
 #cart {
   text-align: center;
 }
+
+li {
+  list-style: none;
+}

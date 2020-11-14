@@ -9,14 +9,19 @@ import './app.css';
 function App() {
   const [cart, setCart] = useState(new Map());
 
-  function addToCart(id, quantity) {
+  function addToCart(id, name, price, quantity) {
     let newQuantity = quantity;
     if (cart.has(id)) {
       const oldQuantity = cart.get(id);
       newQuantity = parseInt(oldQuantity, 10) + parseInt(quantity, 10);
     }
 
-    setCart(cart.set(id, parseInt(newQuantity, 10)));
+    const cartItem = {
+      name,
+      price,
+      quantity: newQuantity,
+    };
+    setCart(cart.set(id, cartItem));
   }
 
   return (

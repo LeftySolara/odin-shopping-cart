@@ -18,7 +18,7 @@ function ProductCard(props) {
         type="button"
         onClick={() => {
           const quantity = document.getElementById(`input-${id}`).value;
-          handleButtonClick(id, quantity);
+          handleButtonClick(id, name, price, quantity);
         }}
       >
         Add to Cart
